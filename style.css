@@ -42,9 +42,28 @@ body {
     width: 100%;
     height: 100%;
     clip-path: polygon(100% 74%, 44% 48%, 100% 25%);
+    animation: 0.5s eat ease-in-out infinite;
 }
 
 .pacman,
 .pacman__eye {
     border-radius: 50%;
+}
+
+@keyframes eat {
+    0% {
+        clip-path: polygon(100% 74%, 44% 48%, 100% 25%);
+    }
+    25% {
+        clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+    }
+    50% {
+        clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+    }
+    75% {
+        clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+    }
+    100% {
+        clip-path: polygon(100% 74%, 44% 48%, 100% 25%);
+    }
 }
